@@ -10,10 +10,13 @@
 
 BOT_NAME = 'gplaycrawler'
 
-SPIDER_MODULES = ['gplaycrawler.spiders']
-NEWSPIDER_MODULE = 'gplaycrawler.spiders'
+SPIDER_MODULES = ['gplaycrawler_pj.spiders']
+NEWSPIDER_MODULE = 'gplaycrawler_pj.spiders'
 CONCURRENT_REQUESTS_PER_DOMAIN = 100
-ITEM_PIPELINES = ['gplaycrawler.pipelines.GplayPipeline']
+ITEM_PIPELINES = {
+    'gplaycrawler_pj.pipelines.GplayPipeline': 300,
+}
+#custom_settings = {'ITEM_PIPELINES':{'gplaycrawler_pj.pipelines.GplayPipeline'}}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Alo Ventures (+http://alo.ventures)'

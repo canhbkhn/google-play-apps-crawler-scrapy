@@ -30,5 +30,3 @@ class GplaycrawlerItem(scrapy.Item):
     Physical_address = scrapy.Field()
     Video_URL = scrapy.Field()
     Developer_ID = scrapy.Field()
-
-
